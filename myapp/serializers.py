@@ -6,3 +6,5 @@ class TextSerializer(serializers.ModelSerializer):
     class Meta:
         model = TextInfo
         fields = '__all__'
+
+

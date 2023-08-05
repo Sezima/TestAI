@@ -20,7 +20,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
-from myapp.views import TextViewSet
+from myapp.views import generate_response, TextViewSet
 
 
 router = DefaultRouter()
@@ -43,4 +43,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', schema_view.with_ui()),
     path('api/v1/', include(router.urls)),
+    path('generate_response/', generate_response, name='generate_response'),
 ]
